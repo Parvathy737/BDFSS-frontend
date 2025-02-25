@@ -55,7 +55,7 @@ const Sharing = () => {
     e.preventDefault();
     console.log('Sharing file with email:', email);
     const adminToken = localStorage.getItem('adminToken'); // Retrieve the token from local storage
-    const response = await fetch('http://localhost:20000/api/admin/ShareEmail', {
+     await fetch('http://localhost:20000/api/admin/ShareEmail', {
       method: 'POST',
       headers: {
           Authorization: `Bearer ${adminToken}`,
