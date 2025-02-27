@@ -5,7 +5,7 @@ import "../Style/Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [adminId, setAdminId] = useState(null);
+  // const [adminId, setAdminId] = useState(null);
   const token = localStorage.getItem("adminToken");
 
   useEffect(() => {
@@ -18,8 +18,8 @@ const Navbar = () => {
 
         console.log("Decoded Token Data:", decodedData);
 
-        setAdminId(decodedData.adminId); // Extract and set adminId
-        console.log(adminId)
+        // setAdminId(decodedData.adminId); // Extract and set adminId
+        
         localStorage.setItem("userId",decodedData.adminId)
       } catch (error) {
         console.error('Error decoding token:', error);
